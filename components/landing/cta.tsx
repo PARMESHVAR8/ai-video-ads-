@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function CTA() {
   return (
@@ -9,12 +10,14 @@ export default function CTA() {
         <h2 className="text-balance text-2xl font-semibold md:text-3xl">Start Creating AI Video Ads Today</h2>
         <p className="mx-auto mt-2 max-w-2xl text-white/70">Join free and generate your first video ad in minutes.</p>
         <div className="mt-6">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-sky-500 to-violet-600 text-white hover:from-sky-400 hover:to-violet-500"
-          >
-            Sign Up Free
-          </Button>
+          <Link href="/sign-in" aria-label="Sign up or sign in">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-sky-500 to-violet-600 text-white hover:from-sky-400 hover:to-violet-500"
+            >
+              Sign Up Free
+            </Button>
+          </Link>
         </div>
   </div>
     </section>

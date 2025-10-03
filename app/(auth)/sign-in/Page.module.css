@@ -1,0 +1,50 @@
+/* styling for centered layout, dark gradient background, and card container */
+.wrapper {
+  min-block-size: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  /* Full-bleed background image from /public. Replace the URL to change the image. */
+  background-image: url('/futuristic-ai-video-editor-neon-interface.jpg');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative; /* needed for overlay pseudo-element */
+  color: var(--color-foreground);
+}
+
+/* Dark overlay so the sign-in card is readable on top of the photo. Adjust opacity as needed. */
+.wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.card {
+  width: min(100%, 420px);
+  /* Slightly translucent white to show the background underneath while staying readable */
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--color-card-foreground);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-lg);
+  padding: clamp(1rem, 4vw, 1.75rem);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px) saturate(120%);
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+  contain: content;
+  position: relative;
+  z-index: 1; /* ensure card sits above the overlay */
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 1rem;
+  }
+  .card {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+}
