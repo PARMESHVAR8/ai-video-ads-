@@ -1,5 +1,6 @@
 "use client"
-
+import Image from "next/image";
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
@@ -18,26 +19,34 @@ export default function Hero() {
 
         <div className="mt-8 flex items-center justify-center gap-3">
           {/* Primary brand color: neon blue to purple gradient, with proper text contrast */}
-          
-          <Button
-          
-            size="lg"
-            className="bg-gradient-to-r from-sky-500 to-violet-600 text-white hover:from-sky-400 hover:to-violet-500"
-          >
-            Get Started
-          </Button>
-          <Button size="lg" variant="outline" className="border-white/15 bg-white/5 text-white hover:bg-white/10">
-            Watch Demo
-          </Button>
+            <div className="mt-8 flex items-center justify-center gap-3">
+          <Link href="/sign-up">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-sky-500 to-violet-600 text-white hover:from-sky-400 hover:to-violet-500"
+            >
+              Get Started
+            </Button>
+          </Link>
+
+          <Link href="/demo">
+            <Button size="lg" variant="outline" className="border-white/15 bg-white/5 text-white hover:bg-white/10">
+              Watch Demo
+            </Button>
+          </Link>
+        </div>
+
         </div>
 
         {/* Illustration */}
         <div className="mt-12">
-          <img
-            src="/futuristic-ai-video-editor-neon-interface.jpg"
-            alt="Futuristic AI-powered video editing interface"
-            className="mx-auto w-full rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-2 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35)]"
-          />
+        <img
+        src="/ai image.jpg"
+        alt="Futuristic AI-powered video editing interface"
+        // width={1200}
+        // height={700}
+        className="mx-auto w-full rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-2 shadow-[0_0_40px_-10px_rgba(56,189,248,0.35)]"
+/>
         </div>
       </div>
     </section>
