@@ -1,0 +1,92 @@
+/* CSS Modules-based sidebar, fixed width desktop, fills drawer on mobile */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--surface);
+  border-right: 1px solid rgba(148, 163, 184, 0.15);
+  padding: 16px;
+  min-width: 240px;
+}
+
+.header {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  margin-bottom: 12px;
+}
+
+.primaryButton {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(46, 165, 255, 0.35);
+  background: linear-gradient(180deg, rgba(46, 165, 255, 0.14), rgba(46, 165, 255, 0.08));
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+}
+.primaryButton:hover {
+  background: rgba(46, 165, 255, 0.18);
+  border-color: rgba(46, 165, 255, 0.6);
+}
+.primaryButton:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.navList {
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.navItem {
+  display: block;
+  padding: 10px 10px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.9;
+}
+.navItem[aria-current="page"] {
+  background: rgba(46, 165, 255, 0.12);
+  border: 1px solid rgba(46, 165, 255, 0.28);
+}
+.navItem:hover {
+  background: rgba(148, 163, 184, 0.08);
+}
+.navItem:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+.org {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(148, 163, 184, 0.18);
+  display: grid;
+  place-items: center;
+  color: var(--text);
+  font-weight: 700;
+}
+.orgName {
+  font-weight: 600;
+  color: var(--text);
+}
+.orgPlan {
+  font-size: 12px;
+  color: var(--muted);
+}

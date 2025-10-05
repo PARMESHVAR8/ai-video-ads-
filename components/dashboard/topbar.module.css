@@ -1,0 +1,90 @@
+/* Topbar with hamburger on mobile */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(18, 26, 43, 0.95), rgba(18, 26, 43, 0.85));
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(148, 163, 184, 0.06);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.iconButton:hover {
+  background: rgba(148, 163, 184, 0.1);
+}
+.iconButton:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.hamburger {
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  position: relative;
+  display: block;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+}
+.hamburger::before {
+  top: -6px;
+}
+.hamburger::after {
+  top: 6px;
+}
+
+.secondaryBtn {
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(46, 165, 255, 0.35);
+  background: rgba(46, 165, 255, 0.08);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+}
+.secondaryBtn:hover {
+  background: rgba(46, 165, 255, 0.14);
+}
+.secondaryBtn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
