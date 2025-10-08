@@ -73,7 +73,7 @@ export function CreateAdModal({ open, onClose }: Props) {
               className={styles.input}
               type="text"
               name="title"
-              placeholder="Spring Promo 15s"
+              placeholder="Title"
             />
           </label>
 
@@ -83,19 +83,19 @@ export function CreateAdModal({ open, onClose }: Props) {
               className={styles.textarea}
               name="script"
               rows={5}
-              placeholder="Introduce your product, CTA, offer..."
+              placeholder="Write your ad script here..."
             ></textarea>
           </label>
 
           <div className={styles.grid2}>
-            <label className={styles.label}>
+            {/* <label className={styles.label}>
               <span>Style</span>
               <select className={styles.select} name="style" defaultValue="clean">
                 <option value="clean">Clean</option>
                 <option value="bold">Bold</option>
                 <option value="playful">Playful</option>
               </select>
-            </label>
+            </label> */}
 
             <label className={styles.label}>
               <span>Aspect Ratio</span>

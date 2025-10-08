@@ -7,6 +7,7 @@ type Props = {
   onCreateAdClick: () => void
 }
 
+
 export function MainContent({ onCreateAdClick }: Props) {
   return (
     <div className={styles.wrap}>

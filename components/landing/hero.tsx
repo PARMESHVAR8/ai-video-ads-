@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="mt-8 flex items-center justify-center gap-3">
           {/* Primary brand color: neon blue to purple gradient, with proper text contrast */}
             <div className="mt-8 flex items-center justify-center gap-3">
-          <Link href="/sign-up">
+          <Link href="/dashboard">
             <Button
               size="lg"
               className="bg-gradient-to-r from-sky-500 to-violet-600 text-white hover:from-sky-400 hover:to-violet-500"
