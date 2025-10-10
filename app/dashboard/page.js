@@ -1,21 +1,24 @@
 "use client"
 
 import { useState, useCallback } from "react"
+import { useRouter } from "next/navigation"
 import styles from "../styles/page.module.css"
 import { Sidebar } from "../../components/dashboard/sidebar"
 import { Topbar } from "../../components/dashboard/topbar"
 import { MainContent } from "../../components/dashboard/main-content"
-import { CreateAdModal } from "../../components/dashboard/create-ad-modal"
 import { ResponsiveDrawer } from "../../components/dashboard/responsive-drawer"
 
 export default function Page() {
-  const [drawerOpen, setDrawerOpen] = useState(false)
-  const [createOpen, setCreateOpen] = useState(false)
+  const router = useRouter()
 
+  const [drawerOpen, setDrawerOpen] = useState(false)
   const openDrawer = useCallback(() => setDrawerOpen(true), [])
   const closeDrawer = useCallback(() => setDrawerOpen(false), [])
-  const openCreate = useCallback(() => setCreateOpen(true), [])
-  const closeCreate = useCallback(() => setCreateOpen(false), [])
+
+  // navigate to /ai_ad instead of opening modal
+  const openCreate = useCallback(() => {
+    router.push("/ai_ad")
+  }, [router])
 
   return (
     <div className={styles.container}>
@@ -44,9 +47,6 @@ export default function Page() {
           }}
         />
       </ResponsiveDrawer>
-
-      {/* Create Ad modal */}
-      <CreateAdModal open={createOpen} onClose={closeCreate} />
     </div>
   )
 }
